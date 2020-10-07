@@ -1,13 +1,14 @@
 <template>
-  <div class="nav">
+  <div class="base">
     <router-link to="/home">Home</router-link> |
     <router-link to="/about">About</router-link> | 
+    <router-view name="base" />
   </div>
-  <div>
+  <div class="action">
     <input v-model="id" placeholder="请输入要跳转的路由参数"/>{{ id }}
     <input type="button" value="动态跳转" @click="actionClick" />
+    <router-view></router-view>
   </div>
-  <router-view />
 </template>
 <script>
 export default {
@@ -28,11 +29,18 @@ export default {
 };
 </script>
 <style>
-.nav {
+.base {
   margin-top: 20px;
   margin-left: 20px;
   height: 200px;
   width: 800px;
   background-color: darkcyan;
+}
+.action {
+  margin-top: 20px;
+  margin-left: 20px;
+  height: 200px;
+  width: 800px;
+  background-color:darkgray;
 }
 </style>

@@ -6,12 +6,16 @@ const routes = [
   {
     path: "/home",
     name: "Home",
-    component: Home
+    components: {
+      base: Home //组建与路由视图多对多的关系
+    }
   },
   {
     path: "/about",
     name: "About",
-    component: () => import("../components/About.vue")
+    components: {
+      base: () => import("../components/About.vue")
+    }
   },
   {
     path: "/activeRoute/:id",
