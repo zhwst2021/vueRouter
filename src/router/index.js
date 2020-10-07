@@ -22,9 +22,25 @@ const routes = [
     }
   },
   {
+    path: "/my",
+    name: "My",
+    components: {
+      base: () => import("../components/My.vue")
+    }
+  },
+  {
     path: "/activeRoute/:id",
     name: "activeRoute",
     component: activeRoute
+  },
+  {
+    path: "/login",
+    component: () => import("../components/login.vue"),
+    beforeEnter: (to, from, next)=>{
+      console.log("2.----beforeEnter-----");
+      console.log(to, from);
+      next();
+    }
   }
 ];
 
@@ -33,4 +49,18 @@ const router = createRouter({
   routes
 });
 
+router.beforeEach((to, from, next) => {
+  console.log("1.----beforeEach-----");
+  console.log(to, from);
+  if (to.params.id === ":aaa") {
+    next("/login");
+  } else {
+    next();
+  }
+});
+
+router.afterEach((to, from) => {
+  console.log("3.----afterEach-----");
+  console.log(to, from);
+});
 export default router;

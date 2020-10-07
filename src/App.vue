@@ -2,6 +2,7 @@
   <div class="base">
     <router-link to="/home">Home</router-link> |
     <router-link to="/about">About</router-link> | 
+    <router-link to="/my">My</router-link> | 
     <router-view name="base" />
   </div>
   <div class="action">
