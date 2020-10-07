@@ -36,7 +36,7 @@ const routes = [
   {
     path: "/login",
     component: () => import("../components/login.vue"),
-    beforeEnter: (to, from, next)=>{
+    beforeEnter: (to, from, next) => {
       console.log("2.----beforeEnter-----");
       console.log(to, from);
       next();

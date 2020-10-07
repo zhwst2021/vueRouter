@@ -1,12 +1,12 @@
 <template>
   <div class="base">
     <router-link to="/home">Home</router-link> |
-    <router-link to="/about">About</router-link> | 
-    <router-link to="/my">My</router-link> | 
+    <router-link to="/about">About</router-link> |
+    <router-link to="/my">My</router-link> |
     <router-view name="base" />
   </div>
   <div class="action">
-    <input v-model="id" placeholder="请输入要跳转的路由参数"/>{{ id }}
+    <input v-model="id" placeholder="请输入要跳转的路由参数" />{{ id }}
     <input type="button" value="动态跳转" @click="actionClick" />
     <router-view></router-view>
   </div>
@@ -42,6 +42,6 @@ export default {
   margin-left: 20px;
   height: 200px;
   width: 800px;
-  background-color:darkgray;
+  background-color: darkgray;
 }
 </style>
