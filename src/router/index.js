@@ -1,3 +1,4 @@
+// create是vue3的新特性
 import { createRouter, createWebHashHistory } from "vue-router";
 import Home from "../components/Home.vue";
 
