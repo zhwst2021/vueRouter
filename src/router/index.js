@@ -4,11 +4,15 @@ import Home from "../components/Home.vue";
 import activeRoute from "../components/activeRoute.vue";
 const routes = [
   {
-    path: "/home",
+    path: "/",
     name: "Home",
     components: {
       base: Home //组建与路由视图多对多的关系
     }
+  },
+  {
+    path: "/Home",
+    redirect: "/"
   },
   {
     path: "/about",
