@@ -22,15 +22,16 @@ export default {
     this.route = to.params.id;
     console.log("beforeRouteUpdate", to, from, next);
   },
-  beforeRouteEnter(to, from, next) {
-      console.log("----200000000.1----")
-      console.log(to, from)
-      next(vm=>{
-          console.log('vm,!!!!!!!!!',vm)
-      });
-    // 在渲染该组件的对应路由被 confirm 前调用
-    // 不！能！获取组件实例 `this`
-    // 因为当守卫执行前，组件实例还没被创建
-  },
+  // beforeRouteEnter(to, from, next) {
+  //     console.log("----200000000.1----")
+  //     console.log(to, from)
+  //     next(vm=>{
+  //         console.log('vm,!!!!!!!!!',this,vm);
+  //         //  this.route = to.params.id;
+  //     });
+  //   // 在渲染该组件的对应路由被 confirm 前调用
+  //   // 不！能！获取组件实例 `this`
+  //   // 因为当守卫执行前，组件实例还没被创建
+  // },
 };
 </script>

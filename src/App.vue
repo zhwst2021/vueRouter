@@ -22,9 +22,16 @@ export default {
     actionClick() {
       // 动态路由设置，在点击事件中获取参数并传入路由
       // this.$router.push直接跳转
-      this.$router.push("/activeRoute/:" + this.id);
       // this.$router.replace();
       // this.$router.go();
+      // 以下两种方式一样
+      this.$router.push("/activeRoute/" + this.id);
+      // this.$router.push({
+      //   name:"activeRoute",
+      //   params:{
+      //     id:this.id
+      //   }
+      // })
     }
   }
 };
